@@ -3,11 +3,6 @@ module.exports = ({ env }) => ({
   port: env.int('PORT', 1337),
   app: {
     keys: env.array('APP_KEYS'),
-<<<<<<< HEAD
-    keys: ['myKeyA', 'myKeyB']
-=======
-    keys: ['myKeyA', 'myKeyB'],
->>>>>>> refs/remotes/origin/master
   },
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
