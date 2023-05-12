@@ -1,12 +1,11 @@
 module.exports = ({ env }) => ({
-    // ...
+    
     plugins: {
-      // ...
       "users-permissions": {
-        jwtSecret: env('JWT_SECRET', 'cuidpVq7WJCWGMLhevJOkA=='),
-        // ...
+        jwtSecret: env('JWT_SECRET', 'rxJ6AXusPGXoUGgBLQW1Lg=='),
+        
       },
-      // ...
+      
     },
-    // ...
+    
   });
