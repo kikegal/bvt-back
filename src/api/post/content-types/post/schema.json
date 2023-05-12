@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "tours",
+  "collectionName": "posts",
   "info": {
-    "singularName": "tour",
-    "pluralName": "tours",
-    "displayName": "Tours",
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "post",
     "description": ""
   },
   "options": {
@@ -12,13 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Tittle": {
+    "tittle": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "content": {
+      "type": "richtext"
     },
-    "photos": {
+    "media": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -29,14 +29,13 @@
         "audios"
       ]
     },
-    "price": {
-      "type": "decimal"
+    "Slug": {
+      "type": "string"
     },
-    "adventures": {
+    "video": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::adventure.adventure",
-      "mappedBy": "tours"
+      "relation": "oneToOne",
+      "target": "api::video.video"
     }
   }
 }

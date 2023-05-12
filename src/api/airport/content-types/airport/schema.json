@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "cities",
+  "collectionName": "airports",
   "info": {
-    "singularName": "city",
-    "pluralName": "cities",
-    "displayName": "Cities",
+    "singularName": "airport",
+    "pluralName": "airports",
+    "displayName": "Airports",
     "description": ""
   },
   "options": {
@@ -12,14 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Cities": {
+    "Aeroporto": {
       "type": "string"
     },
-    "airports": {
+    "cities": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::airport.airport",
-      "mappedBy": "cities"
+      "target": "api::city.city",
+      "inversedBy": "airports"
     }
   }
 }

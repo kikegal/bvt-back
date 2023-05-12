@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "cities",
+  "collectionName": "adventures",
   "info": {
-    "singularName": "city",
-    "pluralName": "cities",
-    "displayName": "Cities",
+    "singularName": "adventure",
+    "pluralName": "adventures",
+    "displayName": "Adventures",
     "description": ""
   },
   "options": {
@@ -12,14 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Cities": {
+    "Aventura": {
       "type": "string"
     },
-    "airports": {
+    "tours": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::airport.airport",
-      "mappedBy": "cities"
+      "target": "api::tour.tour",
+      "inversedBy": "adventures"
     }
   }
 }
