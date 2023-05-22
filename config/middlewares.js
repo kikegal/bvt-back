@@ -1,16 +1,10 @@
 module.exports = [
-  {
-    name: 'contentSecurityPolicy',
-    enabled: true,
-    params: {
-      directives: {
-        'script-src': ["'self'", "'unsafe-inline'"],
-        'style-src': ["'self'", "'unsafe-inline'"],
+  // Otros middlewares existentes en tu archivo middleware.js
 
-      },
-    },
+  async (ctx, next) => {
+    ctx.set('Content-Security-Policy', "script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'");
+    await next();
   },
-  // Los otros middlewares existentes en tu archivo middleware.js
 ];
 
 module.exports = [
