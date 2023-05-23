@@ -7,7 +7,7 @@ module.exports = [
     config: {
       directives: {
         
-        'connect-src': ["'self'", "https:"],
+        'connect-src': ["'self'", "https:", "https://server-strapi-q2dn.onrender.com"],
         'base-uri': ["'self'"],
         'font-src': ["'self'", "https:", "data:"],
         'form-action': ["'self'"],
