@@ -7,7 +7,7 @@ module.exports = [
     config: {
       directives: {
         
-        'default-src': ["'self'"],
+        'connect-src': ["'self'", "https:"],
         'base-uri': ["'self'"],
         'font-src': ["'self'", "https:", "data:"],
         'form-action': ["'self'"],
