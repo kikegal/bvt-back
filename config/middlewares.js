@@ -1,16 +1,25 @@
-module.exports = [
-  // Otros middlewares existentes en tu archivo middleware.js
 
-  async (ctx, next) => {
-    ctx.set('Content-Security-Policy', "script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' data:");
-
-    await next();
-  },
-];
 
 module.exports = [
   'strapi::errors',
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      directives: {
+        
+        'default-src': ["'self'"],
+        'base-uri': ["'self'"],
+        'font-src': ["'self'", "https:", "data:"],
+        'form-action': ["'self'"],
+        'frame-ancestors': ["'self'"],
+        'object-src': ["'none'"],
+        'script-src': ["'self'"],
+        'script-src-attr': ["'none'"],
+        'style-src': ["'self'", "https:", "'unsafe-inline'"],
+        'upgrade-insecure-requests': [],
+      },
+    },
+  },
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
