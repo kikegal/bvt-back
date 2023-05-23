@@ -5,5 +5,5 @@ WORKDIR /src
 COPY package.json package-lock.json ./
 COPY . .
 RUN npm install 
-CMD ["npm", "build", "strapi"]
+CMD ["npm","run","start"]
 EXPOSE 1337
